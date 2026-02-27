@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Data</title>
+</head>
+<body>
+  <h1>Canvas Courses</h1>
+  <ul id="courses"></ul>
+
+  <script>
+    fetch('/api/canvas-data')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('courses');
+        data.forEach(course => {
+          const li = document.createElement('li');
+          li.textContent = course.name;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
