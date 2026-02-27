@@ -1,4 +1,4 @@
-import { fetchCourses, fetchAssignments } from '../data/canvasApi.js'
+import { fetchCourses, fetchAssignments } from '../data/canvasAPI.js'
 import { createCourse } from '../factories/courseFactory.js'
 
 export async function getCanvasDomainData(token, baseUrl) {

@@ -1,4 +1,4 @@
-class Course {
+export class Course {
     constructor(data, assignments) {
         this.id = data.id;
         this.title = data.name;

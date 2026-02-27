@@ -1,6 +1,6 @@
 //main injecttion point
 import express from 'express'
-import { getCanvasDomainData } from './services/canvasService.js'
+import { getCanvasDomainData } from '../services/canvasService.js'
 import dotenv from 'dotenv'
 
 dotenv.config()
@@ -21,4 +21,6 @@ app.get('/api/canvas', async (req, res) => {
   }
 })
 
-app.listen(3000)
+app.listen(3000 , () => {
+  console.log('Server running on port 3000: http://localhost:3000')
+});

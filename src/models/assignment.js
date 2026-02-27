@@ -1,4 +1,4 @@
-class Assignment {
+export class Assignment {
     constructor(data){
         this.id = data.id;
         this.title = data.name;
