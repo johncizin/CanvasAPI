@@ -1,8 +1,11 @@
 import axios from 'axios'
 
 export async function fetchCourses(token, baseUrl) {
+  console.log("print debug in fetchCourses")
+  console.log('BASE URL:', baseUrl)
+console.log('FULL URL:', `${baseUrl}/api/v1/courses`)
   const res = await axios.get(
-    `${baseUrl}/api/v1/courses`,
+    `${baseUrl}/api/v1/courses?enrollment_state=active`,
     {
       headers: {
         Authorization: `Bearer ${token}`
